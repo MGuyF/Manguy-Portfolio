@@ -185,9 +185,10 @@ export default function App() {
           <a href="#projects" className="text-2xl hover:text-primary transition" onClick={() => setIsMenuOpen(false)}>Projects</a>
           <a href="#about" className="text-2xl hover:text-primary transition" onClick={() => setIsMenuOpen(false)}>About</a>
           <a href="#contact" className="text-2xl hover:text-primary transition" onClick={() => setIsMenuOpen(false)}>Contact</a>
-          <a href="/Manguy-CV.pdf" className="mt-4 inline-flex items-center gap-2 px-4 py-3 bg-primary/80 rounded-full shadow-md hover:scale-105 transition">
+          <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="mt-4 inline-flex items-center gap-2 px-4 py-3 bg-primary/80 rounded-full shadow-md hover:scale-105 transition">
             <Download size={18} /> CV
           </a>
+
         </div>
       )}
 
@@ -196,16 +197,16 @@ export default function App() {
           <div className={`flex items-center gap-3 ${isMenuOpen ? 'relative z-30' : ''}`}>
             <div className="w-12 h-12 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 2H20C23.3137 2 26 4.68629 26 8V20C26 23.3137 23.3137 26 20 26H8C4.68629 26 2 23.3137 2 20V8C2 4.68629 4.68629 2 8 2Z" stroke="url(#paint0_linear_1_2)" stroke-width="3"/>
-                <path d="M14 8V20" stroke="url(#paint1_linear_1_2)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M8 2H20C23.3137 2 26 4.68629 26 8V20C26 23.3137 23.3137 26 20 26H8C4.68629 26 2 23.3137 2 20V8C2 4.68629 4.68629 2 8 2Z" stroke="url(#paint0_linear_1_2)" strokeWidth="3"/>
+                <path d="M14 8V20" stroke="url(#paint1_linear_1_2)" strokeWidth="3" strokeLinecap="round"/>
                 <defs>
                   <linearGradient id="paint0_linear_1_2" x1="2" y1="2" x2="26" y2="26" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#18ad8f"/>
-                    <stop offset="1" stop-color="#3b82f6"/>
+                    <stop stopColor="#18ad8f"/>
+                    <stop offset="1" stopColor="#3b82f6"/>
                   </linearGradient>
                   <linearGradient id="paint1_linear_1_2" x1="14" y1="8" x2="14" y2="20" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#18ad8f"/>
-                    <stop offset="1" stop-color="#3b82f6"/>
+                    <stop stopColor="#18ad8f"/>
+                    <stop offset="1" stopColor="#3b82f6"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -295,16 +296,16 @@ export default function App() {
           {/* Projects grid */}
           <section id="projects" className="py-12">
             <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><LayoutGrid size={28} className="text-primary" />Projets Sélectionnés</h3>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {projects.map(p => (
                 <motion.article 
                   key={p.id} 
                   className="bg-slate-900/50 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-md hover:scale-[1.02] transition" 
                   whileHover={{ y: -4 }}
                 >
-                  <div className="flex gap-4">
-                    <img src={p.img} alt={p.title} className="w-36 h-24 object-contain rounded-md" />
-                    <div>
+                  <div className="flex flex-col sm:flex-row items-start gap-4">
+                    <img src={p.img} alt={p.title} className="w-full sm:w-36 flex-shrink-0 h-auto sm:h-24 object-cover rounded-md" />
+                    <div className="flex-grow">
                       <h4 className="text-xl font-semibold">{p.title}</h4>
                       <p className="text-slate-400 text-sm mt-1">{p.desc}</p>
                       <div className="mt-3 flex gap-2 flex-wrap">
