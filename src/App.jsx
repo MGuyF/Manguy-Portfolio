@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import userAvatar from './avatar.png';
 import busDriverScreenshot from './Bus-Driver-SShoot.png';
+import cvPdf from './Guy Fleury_MANIRAKIZA_CV.pdf';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Download, Mail, Linkedin, LayoutGrid, User, Send, Menu, X } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
@@ -208,7 +209,7 @@ export default function App() {
             <a href="#projects" className="hover:text-white transition">Projets</a>
             <a href="#about" className="hover:text-white transition">À propos</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
-            <a href="/Manguy-CV.pdf" className="ml-4 inline-flex items-center gap-2 px-3 py-2 bg-primary/80 rounded-full shadow-md hover:scale-105 transition">
+            <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="ml-4 inline-flex items-center gap-2 px-3 py-2 bg-primary/80 rounded-full shadow-md hover:scale-105 transition">
               <Download size={16} /> CV
             </a>
           </nav>
@@ -239,7 +240,7 @@ export default function App() {
                 <a href="#projects" className="px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-medium shadow-lg hover:scale-105 transition">
                   Voir mes projets
                 </a>
-                <a href="/Manguy-CV.pdf" className="px-5 py-3 border border-slate-600 rounded-full font-medium hover:bg-slate-800 transition inline-flex items-center gap-2">
+                <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="px-5 py-3 border border-slate-600 rounded-full font-medium hover:bg-slate-800 transition inline-flex items-center gap-2">
                   <Download size={18} /> Télécharger le CV
                 </a>
               </div>
