@@ -73,7 +73,7 @@ const projects = [
     title: 'Blog Laravel/Vue',
     desc: 'Un mini blog moderne avec authentification et CRUD complet, développé avec Laravel et Vue.js.',
     stack: ['Laravel', 'Vue.js', 'Inertia.js', 'Tailwind CSS'],
-    live: '#', // Remplacez par l'URL de démo si disponible
+    live: 'https://blog-laravue-demo-dbx4.onrender.com/',
     github: 'https://github.com/MGuyF/blog-laravue-demo',
     img: blogScreenshot
   },
