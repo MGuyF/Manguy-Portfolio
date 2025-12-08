@@ -343,6 +343,8 @@ export default function App() {
                   <p className="text-center text-slate-400 text-sm">Développeur Full-Stack</p>
                   <div className="mt-4 flex justify-center gap-2">
                     <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">React</span>
+                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Vue</span>
+                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Laravel</span>
                     <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Django</span>
                   </div>
                 </div>
