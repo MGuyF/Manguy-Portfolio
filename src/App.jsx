@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import userAvatar from './avatar.png';
 import busDriverScreenshot from './Bus-Driver-SShoot.png';
+import blogScreenshot from './Mini-Blog-SShot.png';
 import cvPdf from './Guy Fleury_MANIRAKIZA_CV.pdf';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Download, Mail, Linkedin, LayoutGrid, User, Send, Menu, X } from 'lucide-react';
@@ -66,6 +67,15 @@ const projects = [
     live: 'https://bus-driver-full-stack.vercel.app/',
     github: 'https://github.com/MGuyF/Bus-Driver-FullStack',
     img: busDriverScreenshot
+  },
+  {
+    id: 2,
+    title: 'Blog Laravel/Vue',
+    desc: 'Un mini blog moderne avec authentification et CRUD complet, développé avec Laravel et Vue.js.',
+    stack: ['Laravel', 'Vue.js', 'Inertia.js', 'Tailwind CSS'],
+    live: '#', // Remplacez par l'URL de démo si disponible
+    github: 'https://github.com/MGuyF/blog-laravue-demo',
+    img: blogScreenshot
   },
 ];
 
@@ -341,24 +351,28 @@ export default function App() {
                 <div className="bg-slate-900/50 backdrop-blur-md border border-white/10 p-6 rounded-xl">
                   <h4 className="text-xl font-semibold">Mon approche</h4>
                   <p className="text-slate-300 mt-2">
-                    Je construis des applications prêtes pour la production avec un code propre, une interface utilisateur accessible et des déploiements automatisés. J'aime résoudre des problèmes réels avec des architectures fiables et une expérience utilisateur claire.
+                    Je conçois et développe des applications web performantes avec une attention particulière portée à l'expérience utilisateur et à la qualité du code. J'aime résoudre des problèmes complexes avec des architectures robustes et maintenables, en utilisant les meilleures pratiques du développement moderne.
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-3">
                     <div>
                       <h5 className="text-sm text-slate-400">Frontend</h5>
-                      <p className="font-medium">React, Vite, Tailwind</p>
+                      <p className="font-medium">React, Vue.js, Vite, Tailwind</p>
                     </div>
                     <div>
                       <h5 className="text-sm text-slate-400">Backend</h5>
-                      <p className="font-medium">Framework Django Rest, PostgreSQL</p>
+                      <p className="font-medium">Django REST, Laravel, PostgreSQL</p>
+                    </div>
+                    <div>
+                      <h5 className="text-sm text-slate-400">Frameworks Full-Stack</h5>
+                      <p className="font-medium">Inertia.js, REST APIs</p>
                     </div>
                     <div>
                       <h5 className="text-sm text-slate-400">Déploiement</h5>
-                      <p className="font-medium">Render, Vercel</p>
+                      <p className="font-medium">Vercel, Render</p>
                     </div>
                     <div>
-                      <h5 className="text-sm text-slate-400">Outils</h5>
-                      <p className="font-medium">Git, VS Code, Windsurf IDE, GitHub Actions</p>
+                      <h5 className="text-sm text-slate-400">Outils & Méthodes</h5>
+                      <p className="font-medium">Git, GitHub Actions, VS Code, Windsurf IDE</p>
                     </div>
                   </div>
                 </div>
