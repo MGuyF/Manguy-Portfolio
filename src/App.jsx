@@ -247,11 +247,11 @@ export default function App() {
               <p className="mt-4 text-slate-300 max-w-xl">
                 Je conçois et déploie des applications full-stack en mettant l'accent sur la performance, une expérience utilisateur claire et des déploiements fiables. React, Django et les pipelines de production sont mes outils de prédilection.
               </p>
-              <div className="mt-6 flex gap-3">
-                <a href="#projects" className="px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-medium shadow-lg hover:scale-105 transition">
+              <div className="mt-6 flex flex-col items-start sm:flex-row gap-4">
+                <a href="#projects" className="w-full max-w-xs text-center px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-medium shadow-lg hover:scale-105 transition">
                   Voir mes projets
                 </a>
-                <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="px-5 py-3 border border-slate-600 rounded-full font-medium hover:bg-slate-800 transition inline-flex items-center gap-2">
+                <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="w-full max-w-xs px-5 py-3 border border-slate-600 rounded-full font-medium hover:bg-slate-800 transition inline-flex items-center justify-center gap-2">
                   <Download size={18} /> Télécharger le CV
                 </a>
               </div>
@@ -276,7 +276,7 @@ export default function App() {
               className="flex items-center justify-center"
             >
               <div className="w-full max-w-md bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl">
-                <img src={busDriverScreenshot} alt="Bus Driver Management Preview" className="w-full rounded-lg object-contain h-64" />
+                <img src={busDriverScreenshot} alt="Bus Driver Management Preview" className="w-full rounded-lg" />
                 <div className="mt-4">
                   <h3 className="text-xl font-semibold">Bus Driver Management</h3>
                   <p className="text-slate-400 mt-1">Un système complet pour la gestion des chauffeurs, des tournées et des rapports.</p>
@@ -303,9 +303,9 @@ export default function App() {
                   className="bg-slate-900/50 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-md hover:scale-[1.02] transition" 
                   whileHover={{ y: -4 }}
                 >
-                  <div className="flex flex-col sm:flex-row items-start gap-4">
-                    <img src={p.img} alt={p.title} className="w-full sm:w-36 flex-shrink-0 h-auto sm:h-24 object-cover rounded-md" />
-                    <div className="flex-grow">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <img src={p.img} alt={p.title} className="w-full sm:w-36 h-auto sm:h-24 object-cover rounded-md" />
+                    <div>
                       <h4 className="text-xl font-semibold">{p.title}</h4>
                       <p className="text-slate-400 text-sm mt-1">{p.desc}</p>
                       <div className="mt-3 flex gap-2 flex-wrap">
@@ -342,10 +342,10 @@ export default function App() {
                   <h4 className="text-center mt-4 font-semibold">Manguy</h4>
                   <p className="text-center text-slate-400 text-sm">Développeur Full-Stack</p>
                   <div className="mt-4 flex justify-center gap-2">
+                  <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Vue</span>
                     <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">React</span>
-                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Vue</span>
-                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Laravel</span>
                     <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Django</span>
+                    <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Laravel</span>
                   </div>
                 </div>
               </div>
