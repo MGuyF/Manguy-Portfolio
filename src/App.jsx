@@ -13,14 +13,14 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl flex items-center justify-center">
-        <p className="text-center text-lg font-semibold">Merci ! Votre message a bien été envoyé.</p>
+        <p className="text-center text-lg font-semibold">Thank you! Your message has been sent successfully.</p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl">
-      <label htmlFor="name" className="block text-sm text-slate-300">Votre nom</label>
+      <label htmlFor="name" className="block text-sm text-slate-300">Your Name</label>
       <input
         id="name"
         type="text"
@@ -51,7 +51,7 @@ function ContactForm() {
 
       <div className="mt-4">
         <button type="submit" disabled={state.submitting} className="px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-md hover:scale-105 transition disabled:opacity-50 disabled:cursor-not-allowed">
-          Envoyer le message
+          Send Message
         </button>
       </div>
     </form>
@@ -62,7 +62,7 @@ const projects = [
   {
     id: 1,
     title: 'Bus Driver Management',
-    desc: 'Application full-stack pour gérer les chauffeurs, les tournées et les horaires. Tableaux de bord et rapports en temps réel.',
+    desc: 'A full-stack application to manage drivers, routes, and schedules, featuring real-time dashboards and reporting.',
     stack: ['React', 'Django', 'Postgres', 'Render'],
     live: 'https://bus-driver-full-stack.vercel.app/',
     github: 'https://github.com/MGuyF/Bus-Driver-FullStack',
@@ -71,7 +71,7 @@ const projects = [
   {
     id: 2,
     title: 'Blog Laravel/Vue',
-    desc: 'Un mini blog moderne avec authentification et CRUD complet, développé avec Laravel et Vue.js.',
+    desc: 'A modern mini-blog with authentication and full CRUD functionality, built with Laravel and Vue.js.',
     stack: ['Laravel', 'Vue.js', 'Inertia.js', 'Tailwind CSS'],
     live: 'https://blog-laravue-demo-dbx4.onrender.com/',
     github: 'https://github.com/MGuyF/blog-laravue-demo',
@@ -213,12 +213,12 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-2xl font-semibold">Manguy</h1>
-              <div className="text-sm text-slate-400">Développeur Full-Stack</div>
+              <div className="text-sm text-slate-400">Full-Stack Developer</div>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-4 text-sm text-slate-300">
-            <a href="#projects" className="hover:text-white transition">Projets</a>
-            <a href="#about" className="hover:text-white transition">À propos</a>
+            <a href="#projects" className="hover:text-white transition">Projects</a>
+            <a href="#about" className="hover:text-white transition">About</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
             <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="ml-4 inline-flex items-center gap-2 px-3 py-2 bg-primary/80 rounded-full shadow-md hover:scale-105 transition">
               <Download size={16} /> CV
@@ -242,17 +242,17 @@ export default function App() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
-                Bonjour, je suis <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Manguy</span> — je crée des applications web modernes.
+                Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Manguy</span> — I build modern web applications.
               </h2>
               <p className="mt-4 text-slate-300 max-w-xl">
-                Je conçois et déploie des applications full-stack en mettant l'accent sur la performance, une expérience utilisateur claire et des déploiements fiables. React, Django et les pipelines de production sont mes outils de prédilection.
+                I design and deploy full-stack applications with a focus on performance, clear user experiences, and reliable deployments. React, Django, and production pipelines are my tools of choice.
               </p>
               <div className="mt-6 flex flex-col items-start sm:flex-row gap-4">
                 <a href="#projects" className="w-full max-w-xs text-center px-5 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-medium shadow-lg hover:scale-105 transition">
-                  Voir mes projets
+                  View My Projects
                 </a>
                 <a href={cvPdf} download="Guy_Fleury_MANIRAKIZA_CV.pdf" className="w-full max-w-xs px-5 py-3 border border-slate-600 rounded-full font-medium hover:bg-slate-800 transition inline-flex items-center justify-center gap-2">
-                  <Download size={18} /> Télécharger le CV
+                  <Download size={18} /> Download CV
                 </a>
               </div>
 
@@ -279,10 +279,10 @@ export default function App() {
                 <img src={busDriverScreenshot} alt="Bus Driver Management Preview" className="w-full rounded-lg" />
                 <div className="mt-4">
                   <h3 className="text-xl font-semibold">Bus Driver Management</h3>
-                  <p className="text-slate-400 mt-1">Un système complet pour la gestion des chauffeurs, des tournées et des rapports.</p>
+                  <p className="text-slate-400 mt-1">A complete system for managing drivers, routes, and reports.</p>
                   <div className="mt-3 flex gap-2">
                     <a href="https://bus-driver-full-stack.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm inline-flex items-center gap-2 px-3 py-2 bg-primary/80 rounded-md hover:bg-primary transition">
-                      Démo <ExternalLink size={14} />
+                      Demo <ExternalLink size={14} />
                     </a>
                     <a href="https://github.com/MGuyF/Bus-Driver-FullStack" className="text-sm inline-flex items-center gap-2 px-3 py-2 border border-slate-700 rounded-md hover:bg-slate-800 transition">
                       Code <Github size={14} />
@@ -295,7 +295,7 @@ export default function App() {
 
           {/* Projects grid */}
           <section id="projects" className="py-12">
-            <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><LayoutGrid size={28} className="text-primary" />Projets Sélectionnés</h3>
+            <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><LayoutGrid size={28} className="text-primary" />Selected Projects</h3>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {projects.map(p => (
                 <motion.article 
@@ -317,7 +317,7 @@ export default function App() {
                       </div>
                       <div className="mt-3 flex gap-2">
                         <a href={p.live} className="text-sm inline-flex items-center gap-2 px-3 py-2 bg-primary/80 rounded-md hover:bg-primary transition">
-                          Démo
+                          Demo
                         </a>
                         <a href={p.github} className="text-sm inline-flex items-center gap-2 px-3 py-2 border border-slate-700 rounded-md hover:bg-slate-800 transition">
                           Code
@@ -332,7 +332,7 @@ export default function App() {
 
           {/* About */}
           <section id="about" className="py-12">
-            <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><User size={28} className="text-primary" />À propos de moi</h3>
+            <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><User size={28} className="text-primary" />About Me</h3>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
               <div className="col-span-1">
                 <div className="w-full rounded-xl bg-white/5 backdrop-blur-md border border-white/10 p-4">
@@ -340,7 +340,7 @@ export default function App() {
                   <img src={userAvatar} alt="Manguy" className="w-full h-full object-cover rounded-full" />
                 </div>
                   <h4 className="text-center mt-4 font-semibold">Manguy</h4>
-                  <p className="text-center text-slate-400 text-sm">Développeur Full-Stack</p>
+                  <p className="text-center text-slate-400 text-sm">Full-Stack Developer</p>
                   <div className="mt-4 flex justify-center gap-2">
                   <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">Vue</span>
                     <span className="px-3 py-1 bg-slate-800/50 rounded-full text-xs">React</span>
@@ -352,9 +352,9 @@ export default function App() {
 
               <div className="md:col-span-2">
                 <div className="bg-slate-900/50 backdrop-blur-md border border-white/10 p-6 rounded-xl">
-                  <h4 className="text-xl font-semibold">Mon approche</h4>
+                  <h4 className="text-xl font-semibold">My Approach</h4>
                   <p className="text-slate-300 mt-2">
-                    Je conçois et développe des applications web performantes avec une attention particulière portée à l'expérience utilisateur et à la qualité du code. J'aime résoudre des problèmes complexes avec des architectures robustes et maintenables, en utilisant les meilleures pratiques du développement moderne.
+                    I design and develop high-performance web applications with a special focus on user experience and code quality. I enjoy solving complex problems with robust and maintainable architectures, using modern development best practices.
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-3">
                     <div>
@@ -370,11 +370,11 @@ export default function App() {
                       <p className="font-medium">Inertia.js, REST APIs</p>
                     </div>
                     <div>
-                      <h5 className="text-sm text-slate-400">Déploiement</h5>
+                      <h5 className="text-sm text-slate-400">Deployment</h5>
                       <p className="font-medium">Vercel, Render</p>
                     </div>
                     <div>
-                      <h5 className="text-sm text-slate-400">Outils & Méthodes</h5>
+                      <h5 className="text-sm text-slate-400">Tools & Methods</h5>
                       <p className="font-medium">Git, GitHub Actions, VS Code, Windsurf IDE</p>
                     </div>
                   </div>
@@ -388,9 +388,9 @@ export default function App() {
             <h3 className="text-2xl md:text-3xl font-bold flex items-center gap-3"><Send size={28} className="text-primary" />Contact</h3>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl">
-                <h4 className="font-semibold">Construisons quelque chose</h4>
+                <h4 className="font-semibold">Let's Build Something</h4>
                 <p className="text-slate-400 mt-2">
-                  Envoyez-moi un message et je vous répondrai rapidement. Disponible pour des missions freelance et des postes à temps plein.
+                  Send me a message, and I'll get back to you quickly. I'm available for freelance missions and full-time positions.
                 </p>
                 <div className="mt-4 flex gap-3">
                   <a href="mailto:2000291gf@gmail.com" className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-md hover:scale-105 transition">
@@ -407,7 +407,7 @@ export default function App() {
           </section>
 
           <footer className="py-12 text-center text-sm text-slate-500">
-            © {new Date().getFullYear()} Manguy — Créé avec ❤️
+            © {new Date().getFullYear()} Manguy — Created with ❤️
           </footer>
         </main>
       </div>
